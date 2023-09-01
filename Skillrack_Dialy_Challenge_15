@@ -1,0 +1,69 @@
+# *******Skillrack_Dialy_Challenge_15*******
+
+#Program Height Pattern Printing.
+
+#Question:
+
+Height Pattern Printing The height of N cats is passed as the input. The program must print the height of the cats graphically as a column chart represented by # and - as shown in the Example Input/Output section. 
+Boundary Condition(s): 2 <= N <= 100 1 <= Height of each cat <= 100 Input Format: The first line contains N. The second line contains N integers representing the height of N cats separated by a space. 
+
+Output Format: The lines contain the desired pattern as shown in theExample Input/Output section. 
+
+Example Input/Output 1: 
+
+Input: 
+
+6 
+
+10 4 2 6 7 2 
+
+Output:
+
+# - - - - - 
+# - - - - - 
+# - - - - - 
+# - - - # - 
+# - - # # - 
+# - - # # - 
+# # - # # - 
+# # - # # - 
+# # # # # # 
+# # # # # # 
+
+Example Input/Output 2: 
+
+Input: 
+
+10
+
+1 2 3 4 5 6 7 8 9 10 
+
+Output:
+
+- - - - - - - - - #
+- - - - - - - - # #
+- - - - - - - # # #
+- - - - - - # # # # 
+- - - - - # # # # # 
+- - - - # # # # # # 
+- - - # # # # # # # 
+- - # # # # # # # # 
+- # # # # # # # # # 
+# # # # # # # # # #
+
+
+#Answer:
+
+number=int(input())
+array=list(map(int,input().split()))
+maxheight=-1 result=['-']*number 
+for i in range(number): \
+  if array[i]>maxheight: 
+    maxheight=array[i] 
+for a in range(maxheight,0,-1): 
+  for j in range(number): 
+    if array[j]==a: 
+      result[j]='#' 
+  print(*result)
+
+#Skillrack_Dialy_Challenge_15.
